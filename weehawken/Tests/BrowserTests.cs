@@ -51,7 +51,34 @@ namespace weehawken
             RemoteWebElement results =
                 (RemoteWebElement)driver.FindElementByPartialLinkText("Monster cereal");
             Assert.NotNull(results);
-            driver.Quit();
+        }
+
+        [Test]
+        [Ignore("Safari implementation is broken in .Net")]
+        public void SafariTest()
+        {
+            Console.WriteLine("Safari Test");
+            driver = BrowserDriver.GetDriver("safari", false); //no headless for safari
+            driver.Navigate().GoToUrl(url);
+            driver.FindElementByXPath("//input[@id='search_form_input_homepage']")
+                .SendKeys("frankenberries" + Keys.Enter);
+            RemoteWebElement results =
+                (RemoteWebElement)driver.FindElementByPartialLinkText("Monster cereal");
+            Assert.NotNull(results);
+        }
+
+        [Test]
+        [Ignore("Edge Implementation is broken in .Net for MAC")]
+        public void EdgeTest()
+        {
+            Console.WriteLine("Edge Test");
+            //driver = BrowserDriver.GetDriver("edge", true);
+            driver.Navigate().GoToUrl(url);
+            driver.FindElementByXPath("//input[@id='search_form_input_homepage']")
+                .SendKeys("frankenberries" + Keys.Enter);
+            RemoteWebElement results =
+                (RemoteWebElement)driver.FindElementByPartialLinkText("Monster cereal");
+            Assert.NotNull(results);
         }
     }
 }
