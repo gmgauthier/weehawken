@@ -5,7 +5,7 @@ using OpenQA.Selenium.Remote;
 
 namespace weehawken
 {
-    public class Tests
+    public class BrowserTests
     {
         private String url;
         private RemoteWebDriver driver;

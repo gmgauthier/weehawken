@@ -18,9 +18,9 @@ namespace weehawken
                 case "firefox":
                     return GetFirefox(headless);
                 case "safari":
-                    return getSafari(headless);
+                    return getSafari(false); //headless not supported
                 case "edge":
-                    return getEdge(headless);
+                    return getEdge(headless); //headless only available in Selenium 4
                 default:
                     throw new ArgumentException("Invalid browser specified"); 
             }

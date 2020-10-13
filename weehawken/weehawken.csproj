@@ -7,8 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="nunit" Version="3.12.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
     <PackageReference Include="Selenium.WebDriver" Version="4.0.0-alpha05" />
     <PackageReference Include="Selenium.Support" Version="4.0.0-alpha05" />
@@ -17,16 +15,18 @@
     <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="0.27.0" />
     <PackageReference Include="Selenium.WebDriver.Extensions" Version="3.3.0" />
     <PackageReference Include="Selenium.WebDriver.MSEdgeDriver" Version="85.0.564.41" />
-    <PackageReference Include="SpecFlow" Version="3.4.14" />
-    <PackageReference Include="SpecFlow.NUnit" Version="3.4.14" />
-    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.4.14" />
-    <PackageReference Include="gherkin" Version="6.0.0" />
-    <PackageReference Include="SpecFlow.CustomPlugin" Version="3.4.14" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
+    <PackageReference Include="BoDi" Version="1.4.1" />
   </ItemGroup>
 
   <ItemGroup>
     <SpecFlowFeatureFiles Update="WebSearch.feature">
       <Visible>False</Visible>
     </SpecFlowFeatureFiles>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Harness\" />
+    <Folder Include="Tests\" />
   </ItemGroup>
 </Project>
