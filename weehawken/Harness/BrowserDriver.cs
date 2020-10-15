@@ -4,8 +4,6 @@ using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Safari;
-using WebDriverManager;
-using WebDriverManager.DriverConfigs.Impl;
 
 namespace weehawken
 {
